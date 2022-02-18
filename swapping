@@ -1,0 +1,14 @@
+#include <stdio.h>
+int fun(int *n,int *m);
+int main()
+{
+    int x=20,y=8;
+    fun(&x,&y);
+    printf("the val of x is %d\n the value of y is %d\n",x,y);
+}
+int fun(int *n,int *m)
+{
+   *n=*n+*m;
+    *m=*n-*m;
+    *n=*n-*m;
+}
